@@ -5,7 +5,7 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
 TOKEN = "your token here obtained from bot father"
 PORT = int(os.environ.get('PORT', '8443'))
-updater = Updater(token='paste your token here', use_context=True)
+updater = Updater(token= TOKEN, use_context=True)
 # Enable logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     level=logging.INFO)
@@ -25,7 +25,7 @@ def covidindia(update, context):
 
 
 def covidworld(update, context):
-    """Send a message when the command /covidinida is issued."""
+    """Send a message when the command /covidworld is issued."""
     update.message.reply_text(''.join(covid_world_data()))
 
 
